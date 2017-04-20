@@ -40,9 +40,13 @@ Use cf login to target and login to Pivotal Web Services.
 If you are new to PWS, you will notice you are automatically directed to your org and the ‘development’ space.
 
 You should see output similar to:
+
 API endpoint:   https://api.run.pivotal.io (API version: 2.56.0)
+
 User:           sgreenberg@pivotal.io
+
 Org:            Pivotal-Enablement
+
 Space:          development
 
 Alternatively, you can check where you are logged in and targeted at anytime using cf target.
