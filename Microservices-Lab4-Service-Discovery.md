@@ -11,7 +11,9 @@ First you need to deploy the Eureka server. A prebuilt jar is provided here [eur
 - Push the Eureka server to cloud foundry
 ` cf push eureka -p <path-to-jar> -m 512M --random-route -b java_buildpack`
 
-You should see the eureka app running: ` cf apps`
+You should see the eureka app running: 
+
+` cf apps`
 
 #### Accessing the Eureka Console
 Eureka has a built in web UI that shows information on the services registered. You can access it by going to the URL in your browser. At this point, you won’t see any services registered.
@@ -20,19 +22,23 @@ Eureka has a built in web UI that shows information on the services registered. 
 
 #### Creating a User Provided Service for Eureka
 We will need to tell our applications where our Eureka server is. There are many ways to do this, but for the purpose of this class, we will create a user provided service instance that can be bound to any client or service apps.
+
 ` cf cups eureka-service -p '{"uri":"http://<YOUR_EUREKA>"}'`
 
 ### Registering the People Service
 The people service is written with a Eureka client which is disabled by default. For the purpose of the class, we can use Spring Profiles to activate the Eureka client simply by setting an environment variable.
 
 - Set SPRING_PROFILES_ACTIVE=cloud,eureka for your people service.
+
 ` cf set-env people SPRING_PROFILES_ACTIVE cloud,eureka`
 
 - Use ` cf bind-service` to bind the ` eureka-service` you created above to your people service app.
 - Use ` cf restage` so the people service can pick up the changes.
 
 You should be able to see the environment variable.
-```cf env people
+
+```
+cf env people
 ...
 
 User-Provided:
@@ -40,7 +46,9 @@ SPRING_PROFILES_ACTIVE: cloud,eureka
 ```
 
 You should also see the service instance:
-```cf services
+
+```
+cf services
 ...
 
 name             service         plan    bound apps   last operation
@@ -56,9 +64,11 @@ Within a few minutes of restaging, you should see your people service registered
 - Bind the Eureka service and restart the browser app.
 
 You should see the app.
+
 ` cf apps`
 
 You should see the Eureka service bound to the browser app.
+
 ` cf services`
 
 You should also see the browser app registered in the Eureka console.
