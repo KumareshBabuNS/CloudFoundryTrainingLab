@@ -2,7 +2,7 @@ This training is targeted at developers with basic hands-on Cloud Foundry experi
 
 ### You will need:
 
-- 	Code editor of choice like Atom
+- 	Code editor of choice
 
 - 	cURL (for windows): <https://curl.haxx.se/download.html#Win64>
 
@@ -41,16 +41,16 @@ This training is targeted at developers with basic hands-on Cloud Foundry experi
 
    You should see output similar to:
 
-    ```
-    API endpoint:   https://api.run.pivotal.io (API version: 2.56.0)
+  ```
+  API endpoint:   https://api.run.pivotal.io (API version: 2.56.0)
 
-    User:           sgreenberg@pivotal.io
+  User:           sgreenberg@pivotal.io
 
-    Org:            Pivotal-Enablement
+  Org:            Pivotal-Enablement
 
-    Space:          development 
-    ```
+  Space:          development 
+  ```
     
-    Alternatively, you can check where you are logged in and targeted at anytime using ` cf target `.
+   Alternatively, you can check where you are logged in and targeted at anytime using ` cf target `.
 
 
