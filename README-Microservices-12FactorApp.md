@@ -31,9 +31,9 @@ On Windows, if you don’t have curl you can get it from here: <https://curl.hax
 ` curl people-<RANDOM_ROUTE>.cfapps.io/people` 
 
    ...
-
-```{
-  "_embedded" : {
+``` 
+  {
+ "_embedded" : {
     "people" : [ ]
   },
   "_links" : {
@@ -59,8 +59,10 @@ On Windows, if you don’t have curl you can get it from here: <https://curl.hax
 ### Adding Data
 You can add data by issuing a curl request to POST to the people endpoint. Be sure to replace your information and URL below:
 
-```curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.cfapps.io/people
 ```
+curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.cfapps.io/people
+```
+
 Now, you should see the data:
 
 `curl http://people-<RANDOM_ROUTE>.cfapps.io/people`
