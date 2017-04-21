@@ -16,19 +16,20 @@ Use cf push to deploy the application. You should:
 ` cf push people --random-route -b java_buildpack -p ...`
 
 Make sure your app deployed correctly:
+
 ` cf apps `
   ...
 
-``` name     requested state   instances   memory   disk   urls
+```name     requested state   instances   memory   disk   urls
     people   started           1/1         750M     1G     people-<RANDOM_ROUTE>.cfapps.io
 ```
 The app also has an endpoint called /people. You should also be able to curl it:
-On Windows, if you don’t have curl you can get it from here: <curl.haxx.se/download.html>
+On Windows, if you don’t have curl you can get it from here: <https://curl.haxx.se/download.html>
 
 ` curl people-<RANDOM_ROUTE>.cfapps.io/people` 
    ...
 
-``` {
+```{
   "_embedded" : {
     "people" : [ ]
   },
@@ -54,11 +55,13 @@ On Windows, if you don’t have curl you can get it from here: <curl.haxx.se/dow
 
 ### Adding Data
 You can add data by issuing a curl request to POST to the people endpoint. Be sure to replace your information and URL below:
+
 ```curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.cfapps.io/people
 ```
 Now, you should see the data:
+
 `curl http://people-<RANDOM_ROUTE>.cfapps.io/people`
-...
+ ...
 
 ```{
   "_embedded" : {
@@ -100,6 +103,7 @@ Now, you should see the data:
 Now restart your app with cf restart.
 
 Curl your app again:
+
 ` curl http://people-<RANDOM_ROUTE>.cfapps.io/people`
 
 What happened? Why? Not very durable, right? We will correct this in the next exercise
