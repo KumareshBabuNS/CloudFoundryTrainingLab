@@ -7,7 +7,9 @@ We will create an instance of mysql and bind it to our app, thereby removing sta
 - Use ` cf create-service` to create a MySQL service instance cleardb and select the free plan spark.
 
 You should be able to see your service instance:
-```cf services
+
+```
+cf services
 ...
 
 name           service   plan    bound apps   last operation   
@@ -20,7 +22,9 @@ You need to bind your service instance to your application so that is can be use
 - Restage your app so that it uses the new service: ` cf restage`.
 
 You should be able to see your service instance bound to your app:
-``` cf services
+
+``` 
+cf services
 
 ...
 name         service   plan    bound apps   last operation   
@@ -29,12 +33,16 @@ people-mysql cleardb   spark   people       create succeeded
 
 ### Testing Statelessness
 At this point, you should be able to put data into your service that lands in the external mysql service.
-```curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.cfapps.io/people
+
+```
+curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastName":"Greenberg", "company":"Pivotal"}' http://people-<RANDOM_ROUTE>.cfapps.io/people
 ```
 
 - Restart your app.
 You should still see the data:
-```curl http://people-<RANDOM_ROUTE>.cfapps.io/people
+
+```
+curl http://people-<RANDOM_ROUTE>.cfapps.io/people
 ...
 
 {
@@ -89,7 +97,9 @@ By moving the state for your application into an external service, you can now s
 - Notice that you can scale by adding instances: <https://12factor.net/concurrency>
 
 You should see 2 instances:
-```cf app people
+
+```
+cf app people
 ...
 
 0   running   2016-05-17 09:53:40 AM   0.1%     376.8M of 750M   153.7M of 1G      
