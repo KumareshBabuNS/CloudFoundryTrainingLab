@@ -8,9 +8,9 @@ This training is targeted at developers with basic hands-on Cloud Foundry experi
 
 - 	Pivotal Web Services account or ability to create one
 
-    If you don’t have an account, sign up now at: <try.run.pivotal.io/homepage>
+    If you don’t have an account, sign up now at: <https://try.run.pivotal.io/homepage>
 
-- 	Cloud Foundry command line interface (CLI): <console.run.pivotal.io/tools>
+- 	Cloud Foundry command line interface (CLI): <https://console.run.pivotal.io/tools>
 
     If you already have the CLI, make sure you have the most recent version.
 
