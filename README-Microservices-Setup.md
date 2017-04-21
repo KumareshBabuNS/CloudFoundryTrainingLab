@@ -15,12 +15,13 @@ This training is targeted at developers with basic hands-on Cloud Foundry experi
     If you already have the CLI, make sure you have the most recent version.
 
     ` cf --version`
+    
      cf.exe version 6.26.0+9c9a261.2017-04-06
 
     If your version is not more recent that this one, please install the latest.
     Make sure you have correctly installed the CLI. From a terminal window/command prompt:
 
-` $cf `
+    ` $cf `
 
    You should see the self documenting help text. This will be very useful when you go through the class.
 
@@ -38,14 +39,13 @@ This training is targeted at developers with basic hands-on Cloud Foundry experi
 
     You should see output similar to:
 
-`API endpoint:   https://api.run.pivotal.io (API version: 2.56.0)`
+    `API endpoint:   https://api.run.pivotal.io (API version: 2.56.0)`
 
-```User:           sgreenberg@pivotal.io
+    `User:           sgreenberg@pivotal.io`
 
-Org:            Pivotal-Enablement
+    `Org:            Pivotal-Enablement`
 
-Space:          development
-```
+`Space:          development`
 
     Alternatively, you can check where you are logged in and targeted at anytime using ` cf target `.
 
