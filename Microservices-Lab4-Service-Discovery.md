@@ -76,7 +76,7 @@ You should also see the browser app registered in the Eureka console.
 #### Using the browser app
 The Browser app simply logs requests and results to the REST endpoints of the app.
 - Open the browser app in your web browser
-- In the ` Explorer` text box, enter ` /people` and hit ` GO'
+- In the ` Explorer` text box, enter ` /people` and hit ` GO`
 The first request *might* fail (not gracefully). This is b/c the browser service is still fetching information from Eureka. In the next exercise, we will add resiliency so we can fail gracefully.
 
 #### What is happening?
