@@ -1,9 +1,13 @@
 Currently, our browser app does not fail gracefully when an issue occurs communicating with the people service. Let’s fix that.
 
-Simulating Failure
+### Simulating Failure
+
 We can simulate failure by stopping the people service app:
-cf stop people
+
+` cf stop people`
+
 Now if you access your browser app and hit Go on the /people endpoint, you should see a 500 error.
+```
 {
   "timestamp": 1463694694293,
   "status": 500,
@@ -12,6 +16,7 @@ Now if you access your browser app and hit Go on the /people endpoint, you shoul
   "message": "getPeople failed and no fallback available.",
   "path": "/people"
 }
+```
 
 Enabling Hystrix
 Our browser app actually has Hystrix built in, but currently disabled. You can enable Hystrix by setting the SPRING_PROFILES_ACTIVE environment variable to hystrix.
