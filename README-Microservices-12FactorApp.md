@@ -22,6 +22,7 @@ Make sure your app deployed correctly:
   ...
 
  name     requested state   instances   memory   disk   urls
+ 
  people   started           1/1         750M     1G     people-<RANDOM_ROUTE>.cfapps.io
     
 The app also has an endpoint called /people. You should also be able to curl it:
