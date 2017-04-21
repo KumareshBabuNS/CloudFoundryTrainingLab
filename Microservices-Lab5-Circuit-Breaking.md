@@ -7,6 +7,7 @@ We can simulate failure by stopping the people service app:
 ` cf stop people`
 
 Now if you access your browser app and hit Go on the /people endpoint, you should see a 500 error.
+
 ```
 {
   "timestamp": 1463694694293,
@@ -18,18 +19,20 @@ Now if you access your browser app and hit Go on the /people endpoint, you shoul
 }
 ```
 
-Enabling Hystrix
-Our browser app actually has Hystrix built in, but currently disabled. You can enable Hystrix by setting the SPRING_PROFILES_ACTIVE environment variable to hystrix.
-cf set-env browser SPRING_PROFILES_ACTIVE hystrix
-cf restart browser
+### Enabling Hystrix
+Our browser app actually has Hystrix built in, but currently disabled. You can enable Hystrix by setting the ` SPRING_PROFILES_ACTIVE` environment variable to ` hystrix`.
+-  ` cf set-env browser  SPRING_PROFILES_ACTIVE hystrix`
+-  ` cf restart browser`
+
 Don’t write your apps this way. You should always be using Hystrix in your spring code, but we do this for the purposes of teaching.
 
-Checking Your Work
 You should see the environment variable:
-cf env browser
+` cf env browser`
 
-Seeing Hystrix in Action
+#### Seeing Hystrix in Action
 Now if you access your browser app and hit Go on the /people endpoint, you should see a graceful failure:
+
+```
 Response Headers
 
 200 OK
@@ -49,8 +52,10 @@ X-Application-Context: browser:hystrix,cloud:0
 
 Properties
 {}
+```
+
 In this case, the fallback method is very simple. It returns an empty array. The fallback could be much more useful as well.
 
-Restoring…
+**Restoring…**
 
 Now, start your people app. Access the browser a few times again until service is restored.
