@@ -26,7 +26,7 @@ The section [` browser,92ca8a46b9903cdc,92ca8a46b9903cdc,true`] is added by Spri
 This corresponds to [app-name from configuration, spanID, traceID,…].
 
 This info is also available in the browser UI.
-![](Lab6-1.png)
+
 
 If you want to see just the application logs, you can run:
 ` cf logs | grep APP`
