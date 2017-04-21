@@ -16,12 +16,12 @@ Use cf push to deploy the application. You should:
 ` cf push people --random-route -b java_buildpack -p ...`
 
 Make sure your app deployed correctly:
-``` cf apps
-...
+> cf apps
+> ...
+>
+> name     requested state   instances   memory   disk   urls
+> people   started           1/1         750M     1G     people-<RANDOM_ROUTE>.cfapps.io
 
-name     requested state   instances   memory   disk   urls
-people   started           1/1         750M     1G     people-<RANDOM_ROUTE>.cfapps.io
-```
 The app also has an endpoint called /people. You should also be able to curl it:
 On Windows, if you don’t have curl you can get it from here: curl.haxx.se/download.html
 
