@@ -42,13 +42,10 @@ This training is targeted at developers with basic hands-on Cloud Foundry experi
    You should see output similar to:
 
   ```
-  API endpoint:   https://api.run.pivotal.io (API version: 2.56.0)
-
-  User:           sgreenberg@pivotal.io
-
-  Org:            Pivotal-Enablement
-
-  Space:          development 
+API endpoint:   https://api.run.pivotal.io (API version: 2.78.0)
+User:           xiaoxia.li@capgemini.com
+Org:            Sandy-CF-Project
+Space:          development
   ```
     
    Alternatively, you can check where you are logged in and targeted at anytime using ` cf target `.
