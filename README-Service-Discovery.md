@@ -1,4 +1,4 @@
-In this exercise, you will deploy a [Eureka}(http://cloud.spring.io/spring-cloud-netflix/) server. You will also deploy a new app browser that consumes data from our people service.
+In this exercise, you will deploy a [Eureka](http://cloud.spring.io/spring-cloud-netflix/) server. You will also deploy a new app browser that consumes data from our people service.
 
 ### About the App
 The browser app uses Eureka to identify instances of our people service. It uses the [Ribbon](https://github.com/Netflix/ribbon) support built into [Spring Cloud Netflix](http://cloud.spring.io/spring-cloud-netflix/) to provide client side load balancing. The browser app also leverages [Feign](https://github.com/Netflix/feign) support which makes writing HTTP clients in java simple.
