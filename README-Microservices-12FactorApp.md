@@ -17,21 +17,24 @@ Use cf push to deploy the application. You should:
 
 Make sure your app deployed correctly:
 
-` cf apps `
+```
+ cf apps 
 
   ...
 
  name     requested state   instances   memory   disk   urls
  
  people   started           1/1         750M     1G     people-<RANDOM_ROUTE>.cfapps.io
-    
+```
+
 The app also has an endpoint called /people. You should also be able to curl it:
 On Windows, if you don’t have curl you can get it from here: <https://curl.haxx.se/download.html>
 
-` curl people-<RANDOM_ROUTE>.cfapps.io/people` 
+```
+ curl people-<RANDOM_ROUTE>.cfapps.io/people 
 
-   ...
-``` 
+ ...
+ 
   {
  "_embedded" : {
     "people" : [ ]
@@ -65,11 +68,12 @@ curl -X POST -H "Content-Type:application/json" -d '{"firstName":"Steve", "lastN
 
 Now, you should see the data:
 
-`curl http://people-<RANDOM_ROUTE>.cfapps.io/people`
+```
+curl http://people-<RANDOM_ROUTE>.cfapps.io/people
 
  ...
 
-```{
+{
   "_embedded" : {
     "people" : [ {
       "firstName" : "Steve",
