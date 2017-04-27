@@ -4,7 +4,7 @@ In the last section, we lost all our data when we restarted our app. In this sec
 
 We will create an instance of mysql and bind it to our app, thereby removing state from memory.
 - Use ` cf marketplace` to view the available services and plans.
-- Use ` cf create-service cf create-service cleardb spark people-mysql` to create a MySQL service instance cleardb and select the free plan spark.
+- Use ` cf create-service cleardb spark people-mysql` to create a MySQL service instance cleardb and select the free plan spark.
 
 You should be able to see your service instance:
 
