@@ -35,7 +35,7 @@ This training is targeted at developers with basic hands-on Cloud Foundry experi
 
 ### Login & Target
 
-   Use ` cf login` to target and login to Pivotal Web Services.
+   Use ` cf login -a api.run.pivotal.io` to target and login to Pivotal Web Services.
 
    If you are new to PWS, you will notice you are automatically directed to your org and the ‘development’ space.
 
