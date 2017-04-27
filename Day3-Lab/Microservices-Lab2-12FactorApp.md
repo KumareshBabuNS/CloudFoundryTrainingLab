@@ -13,7 +13,7 @@ Use cf push to deploy the application. You should:
 - Use the -p flag to point to the jar file
 - Use –random-route to ensure no collisions with other students
 
-` cf push people --random-route -b java_buildpack -p path/people.jar`
+` cf push people --random-route -b java_buildpack -p <path-to-jar>/people.jar`
 "path" is the DIR of people.jar file.
 
 Make sure your app deployed correctly:
