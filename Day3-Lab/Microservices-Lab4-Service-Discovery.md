@@ -12,8 +12,14 @@ First you need to deploy the Eureka server. A prebuilt jar is provided here [eur
 ` cf push eureka -p <path-to-jar> -m 512M --random-route -b java_buildpack`
 
 You should see the eureka app running: 
-
-` cf apps`
+```
+ cf apps
+ ...
+ 
+ name     requested state   instances   memory   disk   urls
+eureka   started           1/1         512M     1G     eureka-embryologic-knighthood.cfapps.io
+people   started           1/1         1G       1G     people-oukinetic-clankingness.cfapps.io
+ ```
 
 #### Accessing the Eureka Console
 Eureka has a built in web UI that shows information on the services registered. You can access it by going to the URL in your browser. At this point, you won’t see any services registered.
