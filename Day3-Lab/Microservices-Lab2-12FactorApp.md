@@ -13,17 +13,17 @@ Use cf push to deploy the application. You should:
 - Use the -p flag to point to the jar file
 - Use –random-route to ensure no collisions with other students
 
-` cf push people --random-route -b java_buildpack -p ...`
+` cf push people --random-route -b java_buildpack -p path/people.jar`
+"path" is the DIR of people.jar file.
 
 Make sure your app deployed correctly:
 
 ```
  cf apps 
 
-  ...
+ ...
 
  name     requested state   instances   memory   disk   urls
- 
  people   started           1/1         750M     1G     people-<RANDOM_ROUTE>.cfapps.io
 ```
 
@@ -110,7 +110,7 @@ curl http://people-<RANDOM_ROUTE>.cfapps.io/people
 ```
 
 #### Restart your App
-Now restart your app with cf restart.
+Now restart your app with ` cf restart people`.
 
 Curl your app again:
 
