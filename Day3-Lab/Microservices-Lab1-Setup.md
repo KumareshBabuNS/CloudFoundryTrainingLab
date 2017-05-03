@@ -31,7 +31,7 @@ This training is targeted at developers with basic hands-on Cloud Foundry experi
 
    You can run `cf help` at any time to see a list of commands. 
 
-   You can also run `cf <SOME_COMMAND> --help` to see the details for a specific command.
+   You can also run `cf <SOME_COMMAND> --help[-h]` to see the details for a specific command.
 
 ### Login & Target
 
